@@ -3,9 +3,7 @@
 use Roots\Sage\Config;
 use Roots\Sage\Wrapper;
 
-?>
-
-<!doctype html>
+?><!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
