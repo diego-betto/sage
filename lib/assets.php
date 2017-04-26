@@ -49,10 +49,10 @@ function asset_path($filename) {
     $manifest_path = get_template_directory() . '/dist/' . 'assets.json';
     $manifest = new JsonManifest($manifest_path);
   }
-
+  $version = '?v='.filemtime(get_template_directory() . '/dist/'.$filename);
   if (array_key_exists($file, $manifest->get())) {
-    return $dist_path . $directory . $manifest->get()[$file];
+    return $dist_path . $directory . $manifest->get()[$file].$version;
   } else {
-    return $dist_path . $directory . $file;
+    return $dist_path . $directory . $file.$version;
   }
 }
